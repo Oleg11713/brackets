@@ -1,5 +1,5 @@
 module.exports = function check(str, bracketsConfig) {
-  brackets = [];
+  let brackets = [];
   for(let i = 0; i < bracketsConfig.length; i++){
     brackets[i] = 0;
   }
