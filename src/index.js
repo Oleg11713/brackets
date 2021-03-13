@@ -17,6 +17,7 @@ module.exports = function check(str, bracketsConfig) {
     }
   }
   for(let i = 0; i < str.length - 1; i++){
+    tmp1 = tmp2 = -1;
     for(let j = 0; j < bracketsConfig.length; j++){
       if(str[i] == bracketsConfig[j][0])
       tmp1 = j;
@@ -25,6 +26,7 @@ module.exports = function check(str, bracketsConfig) {
       if(str[i+1] == bracketsConfig[j][1])
       tmp2 = j;
     }
+    if(tmp1 == -1 || tmp2 == -1) continue;
     if (tmp1 != tmp2) return false;
   }
   return true;
